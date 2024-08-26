@@ -1,0 +1,132 @@
+@import '../../../variables';
+
+.therapy{
+    overflow: hidden;
+}
+.container {
+    width: 100%;
+    margin-top: 50px;
+    padding-left: 15%;
+    overflow: hidden; /* Asegura que el overflow se oculte */
+}
+
+.grid-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 350px); 
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px; 
+    transition: transform 0.5s ease; 
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.grid-item {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: $br-20;
+    text-align: center;
+    perspective: 1000px;
+    overflow: hidden;
+
+    & h3{
+        margin-bottom: 0 !important;
+    }
+
+    &.i1, &.i7, &.i9 {
+        background-image: url('/assets/backgrounds/greenbox.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &.i2, &.i3, &.i5, &.i8, &.i10 {
+        background-image: url('/assets/backgrounds/beigebox.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.i4 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/pics/flowers.jpg');
+        background-size: cover;
+    }
+
+    &.i6 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/pics/faceflower.jpg');
+        background-size: cover;
+        background-position: 0px -130px;
+    }
+
+    &.i11 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/pics/handflower.jpg');
+        background-size: cover;
+        background-position: 0px -80px;
+    }
+
+    &.i12 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/pics/plant.jpg');
+        background-size: cover;
+        background-position: 0px -120px;
+    }
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Permite el efecto de voltear 3D */
+    transition: transform 0.9s; /* Transición suave para el efecto de voltear */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-item:hover .card-inner {
+    transform: rotateY(180deg); /* Gira la tarjeta 180 grados en el eje Y */
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera cuando está girada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 18px;
+    border-radius: $br-20;
+    cursor: pointer;
+  }
+  
+  .card-back {
+    flex-direction: column;
+    border: 1px solid $c-main-lighter;
+    background: #ffffff; /* Color de fondo para la parte trasera */
+    transform: rotateY(180deg); /* Gira la parte trasera para que quede oculta por defecto */
+  }
+
+.slider-btns {
+    display: flex;
+    justify-content: end;
+
+    & .prev, & .next {
+        background-color: transparent !important;
+        border: none !important;
+        cursor: pointer;
+    }
+
+    & .prev {
+        margin-right: 15px;
+    }
+}

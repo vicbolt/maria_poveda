@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+body{
+    margin: 0 !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: $tc-dark;
+
+    h1, h2, h3, h4, h5, h6, p, a{
+        margin: 0;
+    }
+}
+
+@font-face {
+    font-family: 'FiftyHolliwing';
+    src: url('/assets/fonts/FiftyHolliwing.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+//FONTS
+
+
+h1{
+    font-family: 'FiftyHolliwing', sans-serif !important;
+    font-size: 52px;
+    font-weight: 400;
+    margin-bottom: 18px !important;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2rem;
+    color: $tc-medium;
+    margin-bottom: 18px !important;
+}
+
+h3{
+    font-family: 'FiftyHolliwing', sans-serif !important;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 18px !important;
+}
+
+h4{
+    font-size: 12px;
+    font-weight: 500;
+    color: $tc-dark;
+    margin-bottom: 5px !important;
+}
+
+p{
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2rem;
+    color: $tc-medium;
+    
+    &.caption{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1rem;
+        color: $tc-light;
+        margin-bottom: 18px !important;
+    }
+}
+
+
+.link{
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+// BUTTONS
+
+.btn{
+    padding: 3px 10px;
+    border-radius: $br-20;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &.primary{
+        background-color: $c-main-lighter;
+
+        & p{
+            color: $c-white !important;
+        }
+    }
+
+    &.secondary{
+        background-color: white;
+        border: 1px solid $c-main-lighter !important;
+
+        & p{
+            color: $c-main-lighter !important;
+        }
+    }
+}
+
+
+
+.wrap{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}

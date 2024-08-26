@@ -1,0 +1,43 @@
+@import '../../../variables';
+
+.aboutme{
+    .container1{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .left{
+            width: 50%;
+            max-height: 450px;
+
+            video{
+                max-height: 100%;
+                border-radius: $br-20;
+            }
+        }
+
+        .right{
+            width: 50%;
+        }
+    }
+
+    .container2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .element{
+            margin-bottom: 20px;
+        }
+
+        .left{
+            width: 45%;
+        }
+
+        .right{
+            width: 45%;
+
+
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import '../../../variables';
+
+
+.quote{
+    background-color: $c-white;
+
+    .container{
+        width: 100%;
+        padding: 60px 0px;
+
+        p.text{
+            font-family: 'FiftyHolliwing', sans-serif !important;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        p.author{
+            text-align: center;
+            font-size: 10px;
+            font-weight: 300;
+        }
+    }
+}

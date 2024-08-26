@@ -1,0 +1,38 @@
+@import '../../../variables';
+
+.services{
+    margin-top: 50px;
+    .container{
+        .boxes{
+            display: flex;
+            justify-content: space-between;
+            .box{
+                padding: 40px 20px;
+                width: 28%;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: $br-20;
+                box-shadow: $bs-main;
+                text-align: center;
+
+                & p{
+                    line-height: 1.2rem;
+                }
+
+                & .price{
+                    font-size: 35px;
+                    font-weight: 300;
+                    font-family: $ff-deco;
+                    margin: 20px 0px;
+
+                    & span{
+                    font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
