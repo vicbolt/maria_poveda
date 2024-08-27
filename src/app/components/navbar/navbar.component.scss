@@ -14,7 +14,7 @@
         padding: 7px 30px;
 
         img{
-            width: 50%;
+            width: 35%;
         }
 
         .links{
@@ -23,11 +23,23 @@
             justify-content: space-between;
             align-items: center;
 
+            a{
+                margin-bottom: 0 !important;
+            }
+
             .btn{
                 padding: 5px 10px 5px 10px;
                 border-radius: $br-20;
                 border: 1px solid $c-main-darken;
                 color: $c-main-darken;
+                display: flex;
+                align-items: center;
+
+                img{
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 5px;
+                }
             }
         }
     }

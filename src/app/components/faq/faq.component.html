@@ -1,1 +1,16 @@
-<p>faq works!</p>
+<section class="faq" id="faq">
+    <div class="wrap">
+        <h3>Preguntas y respuestas frecuentes</h3>
+        <div class="container">
+            <div class="box" *ngFor="let item of faqs" (click)="toggle(item)" [ngClass]="{'active': item.expanded}">
+                <div class="question">
+                    <h4>{{ item.question }}</h4>
+                    <span class="toggle" [ngClass]="{'active': item.expanded}">&#43;</span>
+                </div>
+                <div class="answer" *ngIf="item.expanded">
+                    <p class="caption">{{ item.answer }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

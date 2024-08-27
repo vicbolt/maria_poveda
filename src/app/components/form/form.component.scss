@@ -1,0 +1,136 @@
+@import "../../../variables";
+
+.form {
+  .container {
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .left {
+        width: 60%;
+      border-radius: $br-20;
+      padding: 20px;
+      background-color: $c-sec-main;
+      height: 100%;
+      padding: 40px 40px;
+
+
+      form {
+        width: 100%;
+
+        .row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          .input-container {
+            width: 49%;
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: 13px;
+                margin-bottom: 7px;
+                margin-left: 7px;
+            }
+
+            input, select{
+                border: none;
+                padding: 10px 20px;
+                border-radius: $br-20;
+            }
+
+            .info{
+                font-size: 13px;
+                color: tomato;
+                margin-left: 10px;
+                margin-top: 5px;
+            }
+          }
+
+          &.textarea{
+            width: 100%;
+
+            .input-container{
+                width: 100%;
+
+                textarea{
+                border: none;
+                padding: 10px 20px;
+                border-radius: $br-20;
+                }
+            }
+          }
+
+        }
+
+        .btn-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button{
+                margin-top: 20px;
+                width: 30%;
+                align-self: center;
+                border: none !important;
+                p{
+                  color: $tc-dark !important;
+                }
+            }
+        }
+      }
+    }
+
+    .right {
+      width: 39%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .box {
+        height: 70%;
+        border-radius: $br-20;
+        padding: 40px;
+        border: 1px solid $c-sec-main;
+        display: flex;
+        flex-direction: column;
+
+        .title{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          a{
+            font-size: 10px;
+            margin-left: 10px;
+            border: none !important;
+            background-color: $c-sec-main;
+          }
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+
+            div{
+                margin-left: 10px;
+            }
+        }
+
+      }
+
+      .img {
+        width: 100%;
+        height: 28%;
+        border-radius: $br-20;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/pics/handplant.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+}

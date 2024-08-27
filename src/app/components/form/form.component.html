@@ -1,1 +1,150 @@
-<p>form works!</p>
+<section class="form" id="form">
+  <div class="wrap">
+    <div class="container">
+      <div class="left">
+        <h3>Contacta conmigo</h3>
+        <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="input-container">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" formControlName="nombre" />
+              <div
+                class="info"
+                *ngIf="
+                  contactoForm.get('nombre')?.invalid &&
+                  contactoForm.get('nombre')?.touched
+                "
+              >
+                El nombre es obligatorio.
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input id="email" formControlName="email" type="email" />
+              <div
+                class="info"
+                *ngIf="
+                  contactoForm.get('email')?.invalid &&
+                  contactoForm.get('email')?.touched
+                "
+              >
+                El email es obligatorio y debe ser válido.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-container">
+              <label for="telefono">Teléfono (opcional)</label>
+              <input id="telefono" formControlName="telefono" />
+            </div>
+
+            <div class="input-container">
+              <label for="motivo">Motivo de contacto</label>
+              <select id="motivo" formControlName="motivo">
+                <option value="" disabled selected>
+                  Seleccione una opción
+                </option>
+                <option value="primer_contacto">Primer contacto</option>
+                <option value="terapia_online">Terapia online</option>
+                <option value="bono_terapia">Bono terapia</option>
+                <option value="otros">Otros</option>
+              </select>
+              <div
+                class="info"
+                *ngIf="
+                  contactoForm.get('motivo')?.invalid &&
+                  contactoForm.get('motivo')?.touched
+                "
+              >
+                El motivo de contacto es obligatorio.
+              </div>
+            </div>
+          </div>
+
+          <div class="row textarea">
+            <div class="input-container">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                formControlName="mensaje"
+                rows="4"
+              ></textarea>
+              <div
+                class="info"
+                *ngIf="
+                  contactoForm.get('mensaje')?.invalid &&
+                  contactoForm.get('mensaje')?.touched
+                "
+              >
+                El mensaje es obligatorio.
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-container">
+            <button class="btn secondary" type="submit">
+              <p>Enviar</p>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="right">
+        <div class="box">
+          <h3>Datos de contacto</h3>
+          <div class="title">
+            <h4>Email</h4>
+            <a
+              class="btn secondary"
+              href="mailto:mpoveda.psicologia&#64;gmail.com"
+              title="Enviar correo a María Poveda"
+              >Enviar correo</a
+            >
+          </div>
+          <a
+            href="mailto:mpoveda.psicologia&#64;gmail.com"
+            title="Enviar correo a María Poveda"
+          >
+            mpoveda.psicologia&#64;gmail.com
+          </a>
+
+          <div class="title">
+            <h4>Teléfono</h4>
+            <a
+              class="btn secondary"
+              href="tel:+34694237552"
+              title="Llamar a María Poveda"
+              >Llamar por teléfono</a
+            >
+          </div>
+          <a href="tel:+34694237552" title="Llamar a María Poveda">
+            +34 694 237 552
+          </a>
+
+          <div class="title">
+            <h4>Whatsapp</h4>
+            <a
+              class="btn secondary"
+              href="https://wa.me/34694237552?text=Hola María,%20me%20gustaría%20conocer%20más%20información%20sobre%20tus%20servicios."
+              target="_blank"
+              title="Enviar mensaje por WhatsApp"
+              >Enviar WhatsApp</a
+            >
+          </div>
+          <a
+            href="https://wa.me/34694237552?text=Hola María,%20me%20gustaría%20conocer%20más%20información%20sobre%20tus%20servicios."
+            target="_blank"
+            title="Enviar mensaje por WhatsApp"
+          >
+            +34 694 237 552
+          </a>
+          <p class="caption">Horario de atención: 9:00am - 20:00pm</p>
+        </div>
+
+        <div class="img"></div>
+      </div>
+    </div>
+  </div>
+</section>

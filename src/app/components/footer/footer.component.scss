@@ -1,0 +1,77 @@
+@import '../../../variables';
+
+
+.footer{
+    margin-top: 100px;
+    padding-top: 30px;
+
+    border-top: 1px solid $c-main-lighter ;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        h4{
+            margin-bottom: 12px !important;
+        }
+        a{
+            font-size: 12px;
+        }
+
+        .logo_rrss{
+            width: 25%;
+            .logo{
+                width: 150px;
+            }
+
+            .contact{
+                margin-top: 20px;
+
+                .group{
+                    margin-bottom: 12px;
+                    h4{
+                        font-size: 9px;
+                        margin-bottom: 0 !important;
+                    }
+    
+                    a{
+                        font-size: 12px;
+                        margin-bottom: 10px !important;
+                    }
+                }
+            }
+
+            .rrss{
+                display: flex;
+                align-items: center;
+
+                .linkedin{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: $br-20;
+                    background-image: url('/assets/icons/linkedin.png');
+                    background-size: contain;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+                }
+
+                .whatsapp{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: $br-20;
+                    background-image: url('/assets/icons/whatsapp.png');
+                    background-size: contain;
+                    cursor: pointer;
+
+                }
+            }
+
+
+        }
+
+        .quicklinks, .policy, .books{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

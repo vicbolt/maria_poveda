@@ -5,7 +5,7 @@
 }
 .container {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 70px;
     padding-left: 15%;
     overflow: hidden; /* Asegura que el overflow se oculte */
 }
@@ -32,7 +32,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     box-sizing: border-box;
     border-radius: $br-20;
     text-align: center;
@@ -104,14 +103,13 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 18px;
+    padding: 18px 25px;
     border-radius: $br-20;
     cursor: pointer;
   }
   
   .card-back {
     flex-direction: column;
-    border: 1px solid $c-main-lighter;
     background: #ffffff; /* Color de fondo para la parte trasera */
     transform: rotateY(180deg); /* Gira la parte trasera para que quede oculta por defecto */
   }
@@ -124,6 +122,11 @@
         background-color: transparent !important;
         border: none !important;
         cursor: pointer;
+
+        img{
+            width: 30px;
+            height: 30px;
+        }
     }
 
     & .prev {
