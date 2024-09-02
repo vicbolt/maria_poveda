@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-
 export class FormComponent {
   contactoForm: FormGroup;
 
@@ -25,7 +23,7 @@ export class FormComponent {
   onSubmit() {
     if (this.contactoForm.valid) {
       const formData = this.contactoForm.value;
-      
+
       // Configura la URL de tu backend en Heroku
       const url = 'https://mariapovedapsicologa-82ed1f098820.herokuapp.com/send-email';
 
@@ -36,12 +34,10 @@ export class FormComponent {
         })
       }).subscribe(
         response => {
-          console.log('Correo enviado con éxito');
-          // Maneja la respuesta del servidor
+          console.log('Correo enviado con éxito:', response);
         },
         error => {
-          console.error('Error al enviar el correo', error);
-          // Maneja el error
+          console.error('Error al enviar el correo:', error);
         }
       );
     } else {
@@ -49,4 +45,3 @@ export class FormComponent {
     }
   }
 }
-
