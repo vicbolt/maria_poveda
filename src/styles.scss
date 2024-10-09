@@ -147,4 +147,8 @@ a.link{
     margin-left: auto;
     margin-right: auto;
     height: 100%;
+
+    @media (max-width: 1200px){
+        width: 85%;
+    }
 }

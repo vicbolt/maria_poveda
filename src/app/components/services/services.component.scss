@@ -7,6 +7,10 @@
             display: flex;
             justify-content: space-between;
 
+            @media (max-width: 1200px){
+                flex-direction: column;
+            }
+
             .box{
                 padding: 40px 20px;
                 width: 33%;
@@ -17,6 +21,12 @@
                 border-radius: $br-20;
                 box-shadow: $bs-main;
                 text-align: center;
+
+                @media (max-width: 1200px){
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+    
 
                 h4{
                     margin-top: 15px;

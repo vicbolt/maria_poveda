@@ -14,8 +14,21 @@
     .container{
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 1200px){
+            flex-direction: column;
+            text-align: center;
+        }
+
+
+
         .left{
             width: 48%;
+            @media (max-width: 1200px){
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
 
             .img{
                 width: 100%;
@@ -40,6 +53,9 @@
 
         .right{
             width: 48%;
+            @media (max-width: 1200px){
+                width: 100%;
+            }
         }
     }
 }

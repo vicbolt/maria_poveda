@@ -6,19 +6,47 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        align-items: stretch;
+        height: 100%;
+
+        @media (max-width: 1200px){
+            flex-direction: column-reverse;
+        }
 
         .left{
-            width: 50%;
-            max-height: 450px;
+            width: 47%;
+            height: 100%;
+
+            @media (max-width: 1200px){
+                width: 100%;
+            }
 
             video{
-                max-height: 100%;
+                width: 100%;
                 border-radius: $br-20;
+
+                @media (max-width: 1200px){
+                    width: 100%;
+                }
             }
         }
 
         .right{
-            width: 50%;
+            width: 47%;
+
+            @media (max-width: 1200px){
+                width: 100%;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+
+        .formacion{
+            margin-top: 40px;
+
+            .element{
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -27,9 +55,7 @@
         justify-content: space-between;
         margin-top: 50px;
 
-        .element{
-            margin-bottom: 20px;
-        }
+
 
         .left{
             width: 45%;
@@ -37,7 +63,6 @@
 
         .right{
             width: 45%;
-
 
         }
     }

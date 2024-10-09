@@ -14,14 +14,18 @@
         padding: 7px 30px;
 
         img{
-            width: 35%;
+            width: 40%;
         }
 
         .links{
-            width: 60%;
+            width: 75%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media (max-width:1200px){
+                display: none;
+            }
 
             a{
                 margin-bottom: 0 !important;

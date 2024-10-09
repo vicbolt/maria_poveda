@@ -9,6 +9,11 @@
         justify-content: space-between;
         align-items: baseline;
 
+        @media (max-width: 1200px){
+        flex-direction: column;
+         }
+    
+
         .box {
             width: 49%;
             border: 1px solid $c-main-darken;
@@ -21,6 +26,11 @@
             margin-bottom: 20px;
             cursor: pointer;
             transition: background-color 0.3s, box-shadow 0.3s;
+
+            @media (max-width: 1200px){
+                width: 100%;
+             }
+        
 
             .question{
                 width: 100%;

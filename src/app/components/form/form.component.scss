@@ -9,6 +9,10 @@
     justify-content: space-between;
     align-items: stretch;
 
+    @media (max-width: 1200px){
+     flex-direction: column;
+  }
+
     .left {
         width: 60%;
       border-radius: $br-20;
@@ -16,6 +20,10 @@
       background-color: $c-sec-main;
       height: 100%;
       padding: 40px 40px;
+
+      @media (max-width: 1200px){
+        width: 100%;
+     }
 
 
       form {
@@ -90,6 +98,11 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media (max-width: 1200px){
+        width: 100%;
+        flex-direction: column-reverse;
+     }
+
 
       .box {
         height: 70%;
@@ -99,10 +112,20 @@
         display: flex;
         flex-direction: column;
 
+        @media (max-width: 1200px){
+          padding: 20px;
+       }
+  
+
         .title{
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          @media (max-width: 1200px){
+            margin-top: 20px;
+         }
+    
 
           a{
             font-size: 10px;
@@ -130,6 +153,13 @@
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/pics/handplant.jpg");
         background-position: center;
         background-size: cover;
+
+        @media (max-width: 1200px){
+          width: 100%;
+          height: 300px;
+          margin: 20px 0 ;
+       }
+  
       }
     }
   }
