@@ -3,12 +3,20 @@
 .therapy{
     overflow: hidden;
 
+    @media (max-width:1200px){
+        text-align: center;
+    }
+
 }
 .container {
     width: 100%;
     margin-top: 70px;
     padding-left: 15%;
     overflow: hidden; /* Asegura que el overflow se oculte */
+
+    @media (max-width:1200px){
+        padding-left: 12px;
+    }
 }
 
 .grid-slider {
