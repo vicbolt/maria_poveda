@@ -3,6 +3,9 @@
 .services{
     margin-top: 70px;
     .container{
+        @media (max-width: 1200px){
+            text-align: center;
+        }
         .boxes{
             display: flex;
             justify-content: space-between;
